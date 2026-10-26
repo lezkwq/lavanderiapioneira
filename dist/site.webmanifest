@@ -1,0 +1,12 @@
+{
+  "name": "Lavanderia White",
+  "short_name": "White",
+  "lang": "pt-BR",
+  "display": "browser",
+  "theme_color": "#103D88",
+  "background_color": "#01327e",
+  "icons": [
+    { "src": "/icons/white-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/white-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
