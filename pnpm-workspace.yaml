@@ -1,2 +1,6 @@
 allowBuilds:
   esbuild: set this to true or false
+
+nodeLinker: hoisted
+storeDir: node_modules/.pnpm-store
+verifyDepsBeforeRun: false

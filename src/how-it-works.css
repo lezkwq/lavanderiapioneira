@@ -66,3 +66,9 @@
   .how-contact { margin: 28px 0 0 58px; padding: 0 19px; gap: 21px; }
 }
 @media (prefers-reduced-motion:reduce) { .how-section * { transition: none !important; } .how-step:hover .how-step-icon, .how-contact:hover svg { transform: none; } }
+.carpet-process { margin-top:28px; padding:22px 0; border-top:1px solid #d5e4f6; border-bottom:1px solid #d5e4f6; color:#103d88; }
+.carpet-process summary { cursor:pointer; font-size:14px; font-weight:600; line-height:1.6; }
+.carpet-process > p { font-size:12px; line-height:1.8; color:#5a6e8b; }
+.carpet-process ol { padding-left:20px; margin:18px 0 0; }
+.carpet-process li { padding:0 0 10px 5px; font-size:12px; line-height:1.85; color:#5a6e8b; }
+.carpet-process strong { color:#103d88; font-weight:600; }

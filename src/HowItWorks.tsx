@@ -1,9 +1,10 @@
 import './how-it-works.css';
+import business from './data/business.json';
 
 const steps = [
-  { title: 'Entre em contato', description: 'Chame nossa equipe pelo WhatsApp.', icon: 'message' },
-  { title: 'Conte o que precisa', description: 'Informe quais peças ou serviços você procura.', icon: 'clothes' },
-  { title: 'Combine os detalhes', description: 'Nossa equipe orienta você sobre o atendimento.', icon: 'check' },
+  { title: 'Conte o que precisa', description: 'Envie uma mensagem e conte quais peças ou ambientes precisam de cuidado.', icon: 'message' },
+  { title: 'Combine o atendimento', description: 'Nossa equipe orienta sobre o serviço, o orçamento e as opções de coleta e entrega.', icon: 'clothes' },
+  { title: 'Deixe o cuidado com a gente', description: 'Com os detalhes combinados, suas peças seguem para o atendimento da Pioneira.', icon: 'check' },
 ] as const;
 
 function StepIcon({ name }: { name: typeof steps[number]['icon'] }) {
@@ -19,11 +20,11 @@ export function HowItWorks() {
     <div className="how-container">
       <div className="how-heading">
         <p className="how-eyebrow">Como funciona</p>
-        <h2 id="how-title">Cuidar das suas roupas ficou mais simples.</h2>
-        <p className="how-description">Conte com a White para facilitar sua rotina.</p>
+        <h2 id="how-title">Seu cuidado começa por uma conversa.</h2>
+        <p className="how-description">A gente cuida dos detalhes para facilitar o seu dia.</p>
       </div>
       <div className="how-layout">
-        <div className="how-mascot"><img src="/how-it-works/white-mascot.webp" width="800" height="800" alt="Mascote da White: uma gota azul sorridente fazendo sinal de positivo." loading="lazy" decoding="async" /></div>
+        <div className="how-mascot"><img src="/how-it-works/blue-drop.webp" width="800" height="800" alt="Gota azul sorridente fazendo sinal de positivo." loading="lazy" decoding="async" /></div>
         <div className="how-process">
           <ol className="how-timeline">
             {steps.map((step, index) => <li className="how-step" key={step.icon}>
@@ -32,7 +33,23 @@ export function HowItWorks() {
               <span className="how-step-icon"><StepIcon name={step.icon} /></span>
             </li>)}
           </ol>
-          <a className="how-contact" href="https://wa.me/5547997265636" target="_blank" rel="noopener noreferrer">Falar com a White<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg><span className="how-sr-only"> pelo WhatsApp (abre em nova aba)</span></a>
+          <details className="carpet-process">
+            <summary>Como cuidamos dos tapetes</summary>
+            <p>Um processo em 10 etapas, conforme o método apresentado pela Pioneira.</p>
+            <ol>
+              <li><strong>Detecção de sujidades.</strong> Identificação dos pontos que precisam de atenção.</li>
+              <li><strong>Teste químico.</strong> Avaliação da compatibilidade da peça com os produtos.</li>
+              <li><strong>Batedor.</strong> Preparação do tapete para a lavagem.</li>
+              <li><strong>Escovação.</strong> Aplicação dos produtos e escovação da peça.</li>
+              <li><strong>Enxágue.</strong> Retirada dos resíduos da lavagem.</li>
+              <li><strong>Centrifugação.</strong> Remoção do excesso de água.</li>
+              <li><strong>Controle de qualidade.</strong> Conferência do resultado da lavagem.</li>
+              <li><strong>Estufa.</strong> Etapa de secagem do tapete.</li>
+              <li><strong>Nova conferência.</strong> Controle da qualidade da secagem.</li>
+              <li><strong>Finalização.</strong> Preparação da peça para a entrega.</li>
+            </ol>
+          </details>
+          <a className="how-contact" href={business.whatsapp} target="_blank" rel="noopener noreferrer">Falar com a Pioneira<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg><span className="how-sr-only"> pelo WhatsApp (abre em nova aba)</span></a>
         </div>
       </div>
     </div>

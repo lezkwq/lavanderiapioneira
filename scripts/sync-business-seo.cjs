@@ -4,17 +4,17 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const business = JSON.parse(fs.readFileSync(path.join(root, 'src/data/business.json'), 'utf8'));
 const { neighborhood, ...address } = business.address;
-const title = `${business.name} | ${address.addressLocality} – ${address.addressRegion}`;
-const description = `${business.name} em ${neighborhood}, ${address.addressLocality}. Lavagem, secagem, passadoria e cuidados com suas peças. ${address.streetAddress}. WhatsApp: ${business.telephoneDisplay}.`;
+const title = `${business.name} | ${address.addressLocality}, ${address.addressRegion}`;
+const description = `${business.name} em ${neighborhood}, ${address.addressLocality}. Desde 2008, cuidando de tapetes, estofados, cortinas e enxovais, com coleta e entrega. WhatsApp: ${business.whatsappTelephoneDisplay}.`;
 const escapeAttribute = value => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 const schema = {
   '@context': 'https://schema.org', '@type': 'DryCleaningOrLaundry',
-  name: business.name, telephone: business.telephone,
+  name: business.name, telephone: business.telephone, foundingDate: String(business.founded),
   address: { '@type': 'PostalAddress', ...address },
   hasMap: business.maps, sameAs: [business.instagram, business.maps],
   hasOfferCatalog: {
     '@type': 'OfferCatalog', name: 'Serviços de lavanderia',
-    itemListElement: ['Lavagem de roupas', 'Secagem de roupas', 'Passadoria', 'Cuidados com edredons e cobertores', 'Cuidados com cortinas', 'Higienização de tênis'].map(name => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name } })),
+    itemListElement: business.services.map(name => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name } })),
   },
 };
 const file = path.join(root, 'index.html');

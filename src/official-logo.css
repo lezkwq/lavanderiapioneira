@@ -1,17 +1,19 @@
-/* Preserve the original signature's layout box; size the stacked official mark within it. */
-.brand-signature { position: relative; width: 124px; height: 45.45px; }
-.hero .brand-signature .official-header-logo { position: absolute; inset: auto; left: 0; top: 50%; width: auto; height: 74px; max-width: none; transform: translateY(-50%); object-fit: contain; object-position: center; }
-.white-footer .footer-signature { position: relative; width: 124px; height: 47px; }
-.footer-signature .official-footer-logo { position: absolute; left: 0; top: 50%; width: auto; height: 76px; max-width: none; transform: translateY(-50%); object-fit: contain; }
-@media (orientation:portrait) and (max-width:1023px) {
-  .brand-signature { width: 107px; height: 39.25px; }
-  .hero .brand-signature .official-header-logo { height: 61px; }
+.brand-signature, .pioneira-footer .footer-signature { position:relative; display:flex; flex-direction:row; align-items:center; gap:12px; width:220px; height:52px; text-decoration:none; }
+.hero .brand-signature .official-header-logo, .footer-signature .official-footer-logo { position:static; inset:auto; display:block; flex:none; width:60px; height:60px; max-width:none; transform:none; object-fit:contain; object-position:center; }
+.pioneira-wordmark { display:flex; flex-direction:column; align-items:flex-start; color:#fff; font-family:'Plus Jakarta Sans',sans-serif; text-shadow:0 1px 10px #123c6f38; }
+.brand-signature .pioneira-wordmark > span, .footer-signature .pioneira-wordmark > span { margin:0 0 4px; padding:0; font-size:8px; line-height:1; letter-spacing:.25em; font-weight:600; text-transform:uppercase; }
+.pioneira-wordmark > strong { font-size:24px; line-height:1; font-weight:700; letter-spacing:.04em; text-transform:uppercase; }
+.pioneira-wordmark > small { margin-top:6px; font-size:8px; line-height:1; letter-spacing:.12em; text-transform:uppercase; }
+.pioneira-footer .footer-signature { height:60px; }
+@media (max-width:1023px) {
+ .brand-signature { width:185px; height:42px; gap:9px; }
+ .hero .brand-signature .official-header-logo { width:44px; height:44px; }
+ .brand-signature .pioneira-wordmark > strong { font-size:20px; }
+ .brand-signature .pioneira-wordmark > span { font-size:7px; margin-bottom:3px; }
+ .brand-signature .pioneira-wordmark > small { font-size:6px; margin-top:4px; }
 }
-@media (orientation:portrait) and (max-height:740px) and (max-width:767px) {
-  .brand-signature { width: 99px; height: 35.65px; }
-  .hero .brand-signature .official-header-logo { height: 51px; }
-}
-@media (orientation:portrait) and (max-height:620px) {
-  .brand-signature { width: 90px; height: 33.55px; }
-  .hero .brand-signature .official-header-logo { height: 47px; }
+@media (orientation:portrait) and (max-height:740px) {
+ .brand-signature { height:35px; }
+ .hero .brand-signature .official-header-logo { width:35px; height:35px; }
+ .brand-signature .pioneira-wordmark > strong { font-size:18px; }
 }

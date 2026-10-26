@@ -2,10 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import './work-gallery.css';
 
 const photographs = [
-  { id: 'view', file: 'curtain-view', caption: 'Cortina com vista', alt: 'Cortina branca ao lado de uma janela com vista para a paisagem e o mar.', width: 720, height: 1280 },
-  { id: 'installation', file: 'curtain-installation', caption: 'Cuidado em cada detalhe', alt: 'Profissional da White em uma escada, instalando uma cortina branca junto à janela.', width: 1440, height: 1440 },
-  { id: 'room', file: 'curtains-room', caption: 'Cortinas no ambiente', alt: 'Cortinas claras em uma sala com duas poltronas e almofadas estampadas.', width: 1440, height: 1439 },
-  { id: 'blazer', file: 'blue-blazer', caption: 'Atenção a cada peça', alt: 'Blazer azul em um cabide, com lapelas, bolsos e acabamento visíveis.', width: 966, height: 1628 },
+  { id: 'bedroom', file: 'enxoval-tapete', caption: 'Enxoval e tapetes. Cuidado que acompanha o descanso.', alt: 'Quarto com cama arrumada, enxoval claro e tapete de tons neutros.', width: 1127, height: 1395 },
+  { id: 'living', file: 'estofados-cortinas', caption: 'Estofados e cortinas. Conforto em cada canto da casa.', alt: 'Sala com sofá azul, poltronas, cortinas claras e tapete.', width: 1134, height: 1387 },
 ] as const;
 
 function GalleryArrow({ direction = 'right' }: { direction?: 'left' | 'right' }) {
@@ -40,8 +38,8 @@ export function WorkGallery() {
   return <section id="nosso-trabalho" className="work-section" aria-labelledby="work-title">
     <div className="work-container">
       <div className="work-heading">
-        <div><p className="work-eyebrow">Nosso trabalho na prática</p><h2 id="work-title">Cuidado que você pode ver.</h2></div>
-        <p className="work-description">Um pouco do nosso trabalho,<br /> registrado de verdade.</p>
+        <div><p className="work-eyebrow">Sua casa, bem cuidada</p><h2 id="work-title">Seu conforto merece esse cuidado.</h2></div>
+        <p className="work-description">No quarto, na sala e nos detalhes.<br /> A Pioneira cuida do que faz parte da sua vida.</p>
       </div>
       <div className="work-mosaic">
         {photographs.map((item, index) => <figure className={`work-photo work-photo--${item.id}`} key={item.id}>

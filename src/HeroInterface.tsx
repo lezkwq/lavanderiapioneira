@@ -1,6 +1,7 @@
+import business from './data/business.json';
 import { useEffect, useRef, useState } from 'react';
 
-const whatsapp = 'https://wa.me/5547997265636';
+const { whatsapp } = business;
 const navigation = [
   ['Início', '#inicio'],
   ['Serviços', '#servicos'],
@@ -43,7 +44,7 @@ export function HeroInterface() {
 
   return <div className="hero-interface">
     <header className="site-header">
-      <a className="brand-signature" href="#inicio" aria-label="White Lavanderia — início"><img className="official-header-logo" src="/brand/white-official.png" width="422" height="346" alt="White Lavanderia" /></a>
+      <a className="brand-signature" href="#inicio" aria-label="Lavanderia Pioneira início"><img className="official-header-logo" src="/brand/pioneira-symbol.png" width="1080" height="1080" alt="" /><span className="pioneira-wordmark"><span>Lavanderia</span><strong>Pioneira</strong><small>Desde 2008</small></span></a>
       <nav className="desktop-navigation" aria-label="Navegação principal">{navigation.map(([label, href]) => <a key={href} href={href} aria-current={href === '#inicio' ? 'page' : undefined}>{label}</a>)}</nav>
       <a className="header-contact" href={whatsapp} target="_blank" rel="noopener noreferrer">Fale conosco<Arrow diagonal /></a>
       <button ref={menuButton} className="menu-toggle" type="button" aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'} aria-expanded={menuOpen} aria-controls="mobile-navigation" onClick={() => setMenuOpen(!menuOpen)}><span className={menuOpen ? 'menu-lines is-open' : 'menu-lines'}><span /><span /></span></button>
@@ -53,11 +54,11 @@ export function HeroInterface() {
       </div>
     </header>
     <div className="hero-copy">
-      <p className="hero-eyebrow">LAVANDERIA EM BALNEÁRIO CAMBORIÚ</p>
+      <p className="hero-eyebrow">LAVANDERIA EM ITAJAÍ</p>
       <h1><span>Mais cuidado com suas roupas.</span><span>Mais tempo para você.</span></h1>
-      <p className="hero-description description-desktop">Da roupa do dia a dia aos edredons, cortinas e tênis. Lavagem, passadoria e cuidado para deixar sua rotina mais leve.</p>
-      <p className="hero-description description-mobile">Lavagem, passadoria e cuidados especiais para facilitar sua rotina.</p>
-      <div className="hero-actions"><a className="primary-cta" href={whatsapp} target="_blank" rel="noopener noreferrer">Solicitar atendimento<Arrow /></a><a className="secondary-cta" href="#servicos">Conhecer serviços<Arrow /></a></div>
+      <p className="hero-description description-desktop">Tapetes, estofados, cortinas e enxovais. Cuidado com o que faz parte da sua casa, com coleta e entrega.</p>
+      <p className="hero-description description-mobile">Cuidado com sua casa e suas peças, com coleta e entrega.</p>
+      <div className="hero-actions"><a className="primary-cta" href={whatsapp} target="_blank" rel="noopener noreferrer">Pedir orçamento<Arrow /></a><a className="secondary-cta" href="#servicos">Conhecer serviços<Arrow /></a></div>
     </div>
   </div>;
 }

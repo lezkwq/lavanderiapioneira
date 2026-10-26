@@ -1,10 +1,10 @@
 .footer-social-links { display: flex; align-items: flex-start; gap: 12px; min-height: 88px; padding-top: 6px; }
-.footer-social-links .white-social-icon { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid #ffffff40; border-radius: 12px; color: #fff; background: transparent; transition: background 200ms ease, border-color 200ms ease; }
-.footer-social-links .white-social-icon svg { width: 22px; height: 22px; }
+.footer-social-links .pioneira-social-icon { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid #ffffff40; border-radius: 12px; color: #fff; background: transparent; transition: background 200ms ease, border-color 200ms ease; }
+.footer-social-links .pioneira-social-icon svg { width: 22px; height: 22px; }
 .location-icon > svg { display: block; }
 .mobile-whatsapp { display: none; }
-@media (hover:hover) { .footer-social-links .white-social-icon:hover { background: #ffffff12; border-color: #a9d4ff; } }
-.footer-social-links .white-social-icon:active { background: #ffffff20; }
+@media (hover:hover) { .footer-social-links .pioneira-social-icon:hover { background: #ffffff12; border-color: #a9d4ff; } }
+.footer-social-links .pioneira-social-icon:active { background: #ffffff20; }
 @media (max-width:767px) {
   .mobile-whatsapp { position: fixed; z-index: 20; right: calc(18px + env(safe-area-inset-right, 0px)); bottom: calc(20px + env(safe-area-inset-bottom, 0px) + var(--whatsapp-lift, 0px)); display: grid; place-items: center; width: 54px; height: 54px; border: 1px solid #ffffffa0; border-radius: 18px; background: #103d88; color: #fff; box-shadow: 0 5px 20px #082b6333; transition: background 200ms ease, box-shadow 200ms ease; }
   .mobile-whatsapp svg { width: 27px; height: 27px; }
@@ -12,4 +12,4 @@
   .mobile-whatsapp:active { background: #176cd0; box-shadow: 0 3px 12px #082b6326; }
 }
 @media (hover:hover) { .mobile-whatsapp:hover { background: #176cd0; } }
-@media (prefers-reduced-motion:reduce) { .footer-social-links .white-social-icon, .mobile-whatsapp { transition: none; } }
+@media (prefers-reduced-motion:reduce) { .footer-social-links .pioneira-social-icon, .mobile-whatsapp { transition: none; } }

@@ -10,8 +10,8 @@ function InstagramIcon() {
 }
 export function FooterSocialLinks() {
   return <div className="footer-social-links">
-    <a className="white-social-icon" href={business.whatsapp} target="_blank" rel="noopener noreferrer" aria-label={`Conversar com a White no WhatsApp: ${business.telephoneDisplay}`} title={`WhatsApp · ${business.telephoneDisplay}`}><WhatsAppIcon /></a>
-    <a className="white-social-icon" href={business.instagram} target="_blank" rel="noopener noreferrer" aria-label={`Instagram da White: ${business.instagramHandle}`} title={`Instagram · ${business.instagramHandle}`}><InstagramIcon /></a>
+    <a className="pioneira-social-icon" href={business.whatsapp} target="_blank" rel="noopener noreferrer" aria-label={`Conversar com a Pioneira no WhatsApp: ${business.whatsappTelephoneDisplay}`} title={`WhatsApp · ${business.telephoneDisplay}`}><WhatsAppIcon /></a>
+    <a className="pioneira-social-icon" href={business.instagram} target="_blank" rel="noopener noreferrer" aria-label={`Instagram da Pioneira: ${business.instagramHandle}`} title={`Instagram · ${business.instagramHandle}`}><InstagramIcon /></a>
   </div>;
 }
 export function FloatingWhatsApp() {
@@ -43,5 +43,5 @@ export function FloatingWhatsApp() {
     document.fonts.ready.then(schedule);
     return () => { window.removeEventListener('scroll', schedule); window.removeEventListener('resize', schedule); cancelAnimationFrame(frame); };
   }, []);
-  return <a ref={link} className="mobile-whatsapp" href={business.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="Falar com a White pelo WhatsApp" title="Falar com a White"><WhatsAppIcon /></a>;
+  return <a ref={link} className="mobile-whatsapp" href={business.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="Falar com a Pioneira pelo WhatsApp" title="Falar com a Pioneira"><WhatsAppIcon /></a>;
 }
