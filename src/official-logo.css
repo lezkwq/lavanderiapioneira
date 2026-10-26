@@ -1,0 +1,17 @@
+/* Preserve the original signature's layout box; size the stacked official mark within it. */
+.brand-signature { position: relative; width: 124px; height: 45.45px; }
+.hero .brand-signature .official-header-logo { position: absolute; inset: auto; left: 0; top: 50%; width: auto; height: 74px; max-width: none; transform: translateY(-50%); object-fit: contain; object-position: center; }
+.white-footer .footer-signature { position: relative; width: 124px; height: 47px; }
+.footer-signature .official-footer-logo { position: absolute; left: 0; top: 50%; width: auto; height: 76px; max-width: none; transform: translateY(-50%); object-fit: contain; }
+@media (orientation:portrait) and (max-width:1023px) {
+  .brand-signature { width: 107px; height: 39.25px; }
+  .hero .brand-signature .official-header-logo { height: 61px; }
+}
+@media (orientation:portrait) and (max-height:740px) and (max-width:767px) {
+  .brand-signature { width: 99px; height: 35.65px; }
+  .hero .brand-signature .official-header-logo { height: 51px; }
+}
+@media (orientation:portrait) and (max-height:620px) {
+  .brand-signature { width: 90px; height: 33.55px; }
+  .hero .brand-signature .official-header-logo { height: 47px; }
+}
