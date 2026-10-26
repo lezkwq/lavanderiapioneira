@@ -55,7 +55,7 @@ export function HeroInterface() {
     </header>
     <div className="hero-copy">
       <p className="hero-eyebrow">LAVANDERIA EM ITAJAÍ</p>
-      <h1><span>Mais cuidado com suas roupas.</span><span>Mais tempo para você.</span></h1>
+      <h1><span>Mais cuidado<br className="hero-mobile-break" /> com suas roupas.</span><span>Mais tempo<br className="hero-mobile-break" /> para você.</span></h1>
       <p className="hero-description description-desktop">Tapetes, estofados, cortinas e enxovais. Cuidado com o que faz parte da sua casa, com coleta e entrega.</p>
       <p className="hero-description description-mobile">Cuidado com sua casa e suas peças, com coleta e entrega.</p>
       <div className="hero-actions"><a className="primary-cta" href={whatsapp} target="_blank" rel="noopener noreferrer">Pedir orçamento<Arrow /></a><a className="secondary-cta" href="#servicos">Conhecer serviços<Arrow /></a></div>
